@@ -1,0 +1,118 @@
+ .hero {
+     padding: 75px 0;
+     @include for-tablet {
+         padding: 48px 0 99px 0;
+     }
+     @include for-mobile {
+         padding: 153.2px 0 79px 0;
+     }
+ }
+ 
+ .hero-wrapper {
+     display: flex;
+     align-items: center;
+     gap: 206px;
+     &__text {
+         max-width: 546px;
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         &-title {
+             font-weight: 400;
+             font-size: 72px;
+             line-height: 100%;
+             letter-spacing: -0.553846px;
+             color: $secondary-color-1;
+             @include for-tablet {
+                 font-size: 48px;
+                 line-height: 117%;
+                 text-align: center;
+             }
+             @include for-mobile {
+                 max-width: 100%;
+                 font-size: 32px;
+                 line-height: 112%;
+             }
+         }
+         &-email {
+             width: 445px;
+             padding: 16px 189px 14px 27px;
+             background: $main-color-2;
+             box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+             border: none;
+             border-radius: 24px;
+             outline: none;
+             font-weight: 700;
+             font-size: 15px;
+             line-height: 18px;
+             color: $secondary-color-1;
+             &::placeholder {
+                 opacity: 0.5;
+             }
+             @include for-mobile {
+                 max-width: 100%;
+                 padding-right: 27px;
+             }
+         }
+         &-questions {
+             font-weight: 400;
+             font-size: 15px;
+             line-height: 18px;
+             color: $secondary-color-4;
+         }
+         &-contact {
+             font-weight: bold;
+             color: $secondary-color-4;
+         }
+         @include for-tablet {
+             align-items: center;
+         }
+     }
+     &__img {
+         max-width: 258px;
+         max-height: 499px;
+         object-fit: cover;
+         object-position: center;
+         box-shadow: 25px 25px 80px rgba(54, 83, 107, 0.300727);
+         @include for-tablet {
+             order: -1;
+             max-width: 159px;
+             max-height: 300px;
+         }
+         @include for-mobile {
+             max-width: 127px;
+             max-height: 240px;
+         }
+     }
+     @include for-tablet {
+         flex-direction: column;
+         gap: 48px;
+     }
+     @include for-mobile {
+         gap: 25px;
+     }
+ }
+ 
+ .hero-email {
+     position: relative;
+     margin: 30px 0 16px 0;
+     display: flex;
+     max-width: 445px;
+     max-height: 48px;
+     @include for-mobile {
+         max-width: 327px;
+         max-height: 100%;
+         position: static;
+         margin: 24px 0;
+         flex-direction: column;
+         gap: 16px;
+     }
+ }
+ 
+ .hero-email button {
+     position: absolute;
+     right: 0;
+     @include for-mobile {
+         position: static;
+     }
+ }
